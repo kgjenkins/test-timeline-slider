@@ -66,45 +66,52 @@ class TimelineFilter {
         }
         this.control = L.control.timelineSlider({
             timelineItems: titles, 
-            changeMap: this.updateMarkers,
+            changeMap: this.updateMarkers.bind(this),
             position: 'bottomleft',
             backgroundOpacity: 1,
             inactiveColor: '#444',
             activeColor: '#2e81c7',
+            labelWidth: '120px',
+            betweenLabelAndRangeSpace: '20px',
+            topBgPadding: '20px',
+            bottomBgPadding: '20px',
+            rightBgPadding: '60px',
+            leftBgPadding: '60px',
             caller: this
         }).addTo(this.map)
     }
 
-  updateMarkers({label, value, map}) {
-      let tf = this.caller
-      console.log(tf)
-      // remove any previous markers
-      tf.map.eachLayer(function (layer) {
-          if (layer instanceof L.Marker) {
-              map.removeLayer(layer);
-          }
-      });
-      // get the selected timeline entry
-      // (subtracting 1 because timeline-slider starts at 1 instead of 0)
-      tf.selected = tf.filtered.features[value-1]
-      let item // this will hold the created layer
-      L.geoJson(tf.selected, {
-          onEachFeature: function onEachFeature(feature, layer) {
-              let p = feature.properties
-              let content = `<h2>${p.title}</h2>${p.location}, ${p.date}<p>${p.description}</p>`
-              let popup = L.popup().setContent(content);
-              layer.bindPopup(popup)
-
-              // store this leaflet layer in the TimelineFilter
-              tf.selected.layer = layer
-          }
-      }).addTo(map);
-
-      // fly to the location -- 2nd param is zoom level, duration in seconds
-      map.flyTo(tf.selected.layer.getLatLng(), 4, { duration: 2})
-
-      // automatically show the info for this item
-      tf.selected.layer.openPopup()
+    updateMarkers({label, value, map}) {
+        // remove any previous markers
+        this.map.eachLayer(function (layer) {
+            if (layer instanceof L.Marker) {
+                map.removeLayer(layer);
+            }
+        });
+        // get the selected timeline entry
+        // (subtracting 1 because timeline-slider starts at 1 instead of 0)
+        this.selected = this.filtered.features[value-1]
+        let item // this will hold the created layer
+        L.geoJson(this.selected, {
+            onEachFeature: (feature, layer) => {
+                let p = feature.properties
+                // handle missing dates
+                let date = p.date ? `${p.date}` : ''
+                let description = p.description.replace(/\n/g, '<br>')
+                let content = `<h2>${p.title}</h2>${p.location} ${date}<p>${description}</p>`
+                let popup = L.popup().setContent(content);
+                layer.bindPopup(popup)
+  
+                // store this leaflet layer in the TimelineFilter
+                this.selected.layer = layer
+            }
+        }).addTo(map);
+  
+        // fly to the location -- 2nd param is zoom level, duration in seconds
+        map.flyTo(this.selected.layer.getLatLng(), 5, { duration: 2})
+  
+        // automatically show the info for this item
+        this.selected.layer.openPopup()
     }
 
 }

@@ -14,7 +14,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.7701297,
+          139.770129700000012,
           35.6797905
         ]
       }
@@ -82,7 +82,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.7733889,
+          139.773388899999986,
           35.6800265
         ]
       }
@@ -107,7 +107,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "1",
+        "title": "Aikido",
         "person": "Anthony Fazio",
         "location": "Elizabeth, NJ",
         "date": "",
@@ -124,7 +124,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "2",
+        "title": "Aiki-jujitsu",
         "person": "Anthony Fazio",
         "location": "New York City",
         "date": null,
@@ -141,11 +141,11 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "3",
+        "title": "Gong-fu",
         "person": "Anthony Fazio",
         "location": "Paterson, NJ",
         "date": null,
-        "description": "Anthony learned Gong-fu under randy Ella."
+        "description": "Anthony learned Gong-fu under Randy Ella."
       },
       "geometry": {
         "type": "Point",
@@ -158,7 +158,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "4",
+        "title": "Liu He Ba Fa",
         "person": "Anthony Fazio",
         "location": "Rutherford, NJ",
         "date": "",
@@ -175,11 +175,11 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "5",
+        "title": "Taijiquan",
         "person": "Anthony Fazio",
         "location": "Morristown, NJ",
         "date": "",
-        "description": "Anthony learned Yang-Style taijiquan from Alex Kiupe. \n\nIn 1998 Anthony opened a practice in Rockland for two years before him and his wife relocated."
+        "description": "Anthony learned Yang-Style taijiquan from Alex Kiupe.  In 1998, Anthony opened a practice in Rockland for two years before him and his wife relocated."
       },
       "geometry": {
         "type": "Point",
@@ -192,7 +192,7 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "6",
+        "title": "Acupuncture",
         "person": "Anthony Fazio",
         "location": "Stamford, CT",
         "date": null,
@@ -247,7 +247,7 @@
         "person": "Anthony Fazio",
         "location": "Ithaca, NY",
         "date": null,
-        "description": "Vladimir Bobkoff arrived in Ithaca by invitation from his family. He worked as a dishwasher at the Cayuga Medical Center in Order to save up for tuition. After he graduated college he opened up practice in Ithaca which is still continued till this day along with his practice in Cortland.\n\nAfter starting her Aikido journey in Tokyo, Yukiko Katagiri came to Ithaca NY by the invite of Eleanor Jordan. Eventually she came to pursue her Ph.D at Cornell and later became an instructor of JapaneAnthony Fazio relocated to Ithaca with his wife. He joined the Cornell Aikido Club under Yukiko Katagiri for 15 years."
+        "description": "Anthony Fazio relocated to Ithaca with his wife. He joined the Cornell Aikido Club under Yukiko Katagiri for 15 years."
       },
       "geometry": {
         "type": "Point",
@@ -293,37 +293,57 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "title": null,
-        "person": null,
-        "location": null,
-        "date": null,
-        "description": null
-      },
       "geometry": {
-        "type": "Point",
         "coordinates": [
-          -76.797695,
-          42.912938
-        ]
-      }
+          -75.853056,
+          42.929848
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "person": "Aaron Abbott",
+        "date": "1970",
+        "location": "Cazenovia",
+        "description": "Aaron was born in 1970 in the town of Cazenovia.",
+        "title": "1970"
+      },
+      "id": "k2NDU"
     },
     {
       "type": "Feature",
-      "properties": {
-        "title": null,
-        "person": null,
-        "location": null,
-        "date": null,
-        "description": null
-      },
       "geometry": {
-        "type": "Point",
         "coordinates": [
-          -74.032059,
-          41.146604
-        ]
-      }
+          -76.661566,
+          42.540173
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Aaron's family moved to Trumansburg in the summer before he started high school.",
+        "date": "1985",
+        "location": "Trumansburg",
+        "person": "Aaron Abbott",
+        "title": "1985"
+      },
+      "id": "kxODI"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -75.152068,
+          39.95953
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "After high school, Aaron moved to Philadelphia to study aikido.\n\nThis is a second paragraph.",
+        "date": "1988",
+        "location": "Philadelphia",
+        "person": "Aaron Abbott",
+        "title": "1988"
+      },
+      "id": "g4MzY"
     }
   ]
 }
