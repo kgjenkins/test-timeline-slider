@@ -1,60 +1,85 @@
 class TimelineFilter {
-  constructor (source, groupBy) {
-      this.source = source
-      this.groupBy = groupBy
-      this.loadData()
-  }
-
-  loadData () {
-      window.fetch(this.source)
-      .then(response => response.json())
-      .then(jsondata => {
-          this.data = jsondata
-          this.findGroups()
-      })
-  }
-
-  findGroups () {
-    // find all the group values
-    let allvals = this.data.features.map(f => f.properties[this.groupBy])
-    // store array of unique group values
-    this.groups = [...new Set(allvals)]
-    // timeline of first group
-    if (this.groups.length > 0) {
-      this.filterData(this.groups[0])
-      this.createTimeline(this.filtered)
+    constructor (source, groupBy, map) {
+        this.source = source
+        this.groupBy = groupBy
+        this.map = map
+        this.loadData(source)
     }
-  }
 
-  filterData (value) {
-      // deep copy the data (no shared references)
-      this.filtered = JSON.parse(JSON.stringify(this.data))
+    loadData (source) {
+        window.fetch(source)
+        .then(response => response.json())
+        .then(jsondata => {
+            this.data = jsondata
+            this.findGroups()
+        })
+    }
 
-      this.filtered.value = value
-      this.filtered.features = timeline.filtered.features.filter(x => x.properties[this.groupBy] === value)
-  }
+    findGroups () {
+        // find all the group values
+        let allvals = this.data.features.map(f => f.properties[this.groupBy])
+        
+        // and store array of just the unique values
+        this.groups = [...new Set(allvals)]
+        
+        // list groups in panel
+        let panel = document.getElementById('groups')
+        for (const value of this.groups) {
+            let b = document.createElement('button')
+            b.innerText = value
+            b.addEventListener('click', this.clickButton.bind(this))
+            panel.append(b)
+        }
+    
+        // activate first value
+        if (this.groups.length > 0) {
+            panel.children.item(0).click()
+        }
+    }
 
-  createTimeline(data) {
-      // get titles from the data to use as timeline labels
-      let titles = data.features.map(x => x.properties.title)
-      if (this.control) {
-          this.control.remove()
-      }
-      this.control = L.control.timelineSlider({
-          timelineItems: titles, 
-          changeMap: this.updateMarkers,
-          position: 'bottomleft',
-          backgroundOpacity: 1,
-          inactiveColor: '#444',
-          activeColor: '#04f',
-          caller: this
-      }).addTo(mymap)
-  }
+    clickButton (e) {
+        let t = e.target
+        if (e.target.classList.contains('active')) {
+            return
+        }
+        document.querySelectorAll('#groups button').forEach(a => {
+            a.classList.remove('active')
+        })
+        t.classList.add('active')
+        this.filterData(t.innerText)
+        this.createTimeline(this.filtered)
+    }
+
+    filterData (value) {
+        // deep copy the data (no shared references)
+        this.filtered = JSON.parse(JSON.stringify(this.data))
+  
+        this.filtered.value = value
+        this.filtered.features = timeline.filtered.features.filter(x => x.properties[this.groupBy] === value)
+    }
+
+    createTimeline(data) {
+        // get titles from the data to use as timeline labels
+        let titles = data.features.map(x => x.properties.title)
+        if (this.control) {
+            this.control.remove()
+        }
+        this.control = L.control.timelineSlider({
+            timelineItems: titles, 
+            changeMap: this.updateMarkers,
+            position: 'bottomleft',
+            backgroundOpacity: 1,
+            inactiveColor: '#444',
+            activeColor: '#2e81c7',
+            caller: this
+        }).addTo(this.map)
+    }
 
   updateMarkers({label, value, map}) {
       let tf = this.caller
+      console.log(tf)
       // remove any previous markers
-      map.eachLayer(function (layer) {
+      tf.map.eachLayer(function (layer) {
           if (layer instanceof L.Marker) {
               map.removeLayer(layer);
           }
@@ -74,9 +99,7 @@ class TimelineFilter {
               tf.selected.layer = layer
           }
       }).addTo(map);
-      
-      // update the person's name at top of page
-      document.querySelector('#person').innerHTML = tf.selected.properties.person
+
       // fly to the location -- 2nd param is zoom level, duration in seconds
       map.flyTo(tf.selected.layer.getLatLng(), 4, { duration: 2})
 
