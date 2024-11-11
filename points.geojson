@@ -1,0 +1,329 @@
+{
+  "type": "FeatureCollection",
+  "name": "points",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Student Katagiri",
+        "person": "Yukiko Katagiri",
+        "location": "Tokyo",
+        "date": "1978 December",
+        "description": "Yukiko Katagiri starts her Aikido journey at 26 years old while in graduate school in Tokyo, Japan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7701297,
+          35.6797905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Trip to Ithaca",
+        "person": "Yukiko Katagiri",
+        "location": "Ithaca",
+        "date": "1979 June",
+        "description": "Thanks to Eleanor Jorden who founded the japanese linguistics at Cornell, invited Katagiri Sensei to Cornell for 6-7 weeks. At this time she practiced as a student at an earlier version of the Cornell Aikido Club."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4827233,
+          42.4475711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "A Longer Stay",
+        "person": "Yukiko Katagiri",
+        "location": "Ithaca",
+        "date": "1980",
+        "description": "Yukiko Katagiri came to Cornell to teach Japanese, and founded a new iteration of the Aikido Club. She joined under a 2nd degree black belt and practiced with the group for three years before going back to Japan."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4823637,
+          42.4475711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "A Further Education",
+        "person": "Yukiko Katagiri",
+        "location": "Ithaca",
+        "date": "1985",
+        "description": "Yukiko Katagiri, now a once again, 2nd degree black belt in Aikido herself, returned to Ithaca to pursue her Ph.D.. She started teaching at the Aikido Club."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4819816,
+          42.4475711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Visit Home",
+        "person": "Yukiko Katagiri",
+        "location": "Tokyo",
+        "date": "1989",
+        "description": "Yukiko Katagiri and her husband went back to Japan for a year."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7733889,
+          35.6800265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Conference",
+        "person": "Yukiko Katagiri",
+        "location": "Belgium",
+        "date": "1995",
+        "description": "Sensei Katagiri attended an Aikido camps in Belgium, where she practiced with practitioners from all over the world and had conversations about their teaching experiences."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.359783,
+          50.847343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "1",
+        "person": "Anthony Fazio",
+        "location": "Elizabeth, NJ",
+        "date": "",
+        "description": "Anthony started his martial journey by learning Aikido from Rick Stickles and Greg O'Connor."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.20784,
+          40.670744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "2",
+        "person": "Anthony Fazio",
+        "location": "New York City",
+        "date": null,
+        "description": "Anthony learned Aiki-jujitsu from Roy Goldberg and attended the Ohashi Institute of Shiatsu.  Nine Years after starting his martial journey, Anthony attended a masters program at the Pacific College of Health and Science (previously known as Pacific College of Oriental Medicine).  Three years after starting his masters program, Anthony studied Daoist Herbology with Jeffery Yuan for three years."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.002533,
+          40.71864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "3",
+        "person": "Anthony Fazio",
+        "location": "Paterson, NJ",
+        "date": null,
+        "description": "Anthony learned Gong-fu under randy Ella."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.172306,
+          40.920906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "4",
+        "person": "Anthony Fazio",
+        "location": "Rutherford, NJ",
+        "date": "",
+        "description": "Anthony learned Liu He Ba Fa from Mike Paterson while continuing his martial journey."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.106388,
+          40.827677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "5",
+        "person": "Anthony Fazio",
+        "location": "Morristown, NJ",
+        "date": "",
+        "description": "Anthony learned Yang-Style taijiquan from Alex Kiupe. \n\nIn 1998 Anthony opened a practice in Rockland for two years before him and his wife relocated."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.480438,
+          40.799257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "6",
+        "person": "Anthony Fazio",
+        "location": "Stamford, CT",
+        "date": null,
+        "description": "Anthony attended the Tristate Institute of Stamford in order to study acupuncture."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.531494,
+          41.05036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "China",
+        "person": "Anthony Fazio",
+        "location": "Harbin, China",
+        "date": null,
+        "description": "During the summer Anthony Fazio studied at Heilongjiang University of Chinese Medicine in Harbin."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.627645,
+          45.760457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Rockland County",
+        "person": "Anthony Fazio",
+        "location": "Rockland County, NY",
+        "date": null,
+        "description": "Anthony opened up his first practice in Rockland County but only for a year."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.032059,
+          41.146604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ithaca",
+        "person": "Anthony Fazio",
+        "location": "Ithaca, NY",
+        "date": null,
+        "description": "Vladimir Bobkoff arrived in Ithaca by invitation from his family. He worked as a dishwasher at the Cayuga Medical Center in Order to save up for tuition. After he graduated college he opened up practice in Ithaca which is still continued till this day along with his practice in Cortland.\n\nAfter starting her Aikido journey in Tokyo, Yukiko Katagiri came to Ithaca NY by the invite of Eleanor Jordan. Eventually she came to pursue her Ph.D at Cornell and later became an instructor of JapaneAnthony Fazio relocated to Ithaca with his wife. He joined the Cornell Aikido Club under Yukiko Katagiri for 15 years."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.496859,
+          42.440054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Seneca Falls",
+        "person": "Anthony Fazio",
+        "location": "Seneca Falls",
+        "date": null,
+        "description": "Anthony Fazio taught adjunct classes based off acupuncture at the New york Chiropractic College. In his time teaching there, he ended up meeting Brian Isacks as one of his students. Later on Anthony and Brian would become respected colleagues and good friends."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.797695,
+          42.912938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Austin",
+        "person": "Anthony Fazio",
+        "location": "Austin, TX",
+        "date": null,
+        "description": "Anthony Fazio is currently pursuing his doctoral studies at the Academy of Oriental Medicine in Austin, Texas."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.712402,
+          30.315988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": null,
+        "person": null,
+        "location": null,
+        "date": null,
+        "description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.797695,
+          42.912938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": null,
+        "person": null,
+        "location": null,
+        "date": null,
+        "description": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.032059,
+          41.146604
+        ]
+      }
+    }
+  ]
+}
